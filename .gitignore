@@ -1,0 +1,29 @@
+# Ignore the gitignore directory and all its contents
+gitignore/
+
+# Common development files to ignore
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (if any JavaScript tooling is added)
+node_modules/
+
+# Python cache (if any Python tooling is added)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Backup files
+*.bak
+*.backup
