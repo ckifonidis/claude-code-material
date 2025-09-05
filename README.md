@@ -43,6 +43,28 @@ Each section is designed to be self-contained while building upon previous conce
 - **Best Practices**: DO's and DON'Ts (where applicable)
 - **Official Documentation References**: Links to authoritative sources
 
+## Documentation Downloader
+
+This project includes a tool to automatically download the latest Anthropic documentation for offline reference:
+
+```bash
+# Download all Claude Code documentation
+python documentation_downloader/download_docs.py --filter claude-code
+
+# Download all Anthropic documentation
+python documentation_downloader/download_docs.py
+
+# Custom output directory
+python documentation_downloader/download_docs.py --filter claude-code --output custom_docs
+```
+
+**Features:**
+- ✅ Dynamically fetches URLs from https://docs.anthropic.com/llms.txt
+- ✅ Always gets the latest documentation
+- ✅ Downloads to `gitignore/downloaded_docs` (ignored by git)
+- ✅ Maintains proper directory structure
+- ✅ Filter by documentation sections
+
 ## Contributing
 
 This guide is a work in progress. To contribute:
@@ -50,6 +72,7 @@ This guide is a work in progress. To contribute:
 1. Review [WORKFLOW-PROMPT.md](./WORKFLOW-PROMPT.md) to select a section
 2. Check [PROGRESS.md](./PROGRESS.md) for current status and requirements
 3. Follow the section evaluation criteria in [prompt.md](./prompt.md)
+4. Use `/guide-workflow [section-number]` command for enhanced content processing
 
 ## Project Structure
 
@@ -58,11 +81,17 @@ claude-code-guide/
 ├── README.md                           # This navigation file
 ├── WORKFLOW-PROMPT.md                  # Section selection workflow
 ├── PROGRESS.md                         # Completion tracking
-└── [section-name]/                     # Individual guide sections
-    ├── README.md                       # Section content
-    ├── examples/                       # Practical examples
-    ├── DOS.md                         # Best practices (optional)
-    └── DONTS.md                       # Common mistakes (optional)
+├── .claude/commands/guide-workflow.md  # Custom slash command for development
+├── documentation_downloader/
+│   ├── download_docs.py               # Documentation downloader script
+│   └── documentation                  # Reference documentation file
+├── gitignore/                         # Ignored directory for local files
+│   └── downloaded_docs/               # Downloaded documentation (auto-created)
+└── [01-13]-[section-name]/            # Individual guide sections (numbered)
+    ├── README.md                      # Section content
+    ├── examples/                      # Practical examples
+    ├── DOS.md                        # Best practices (optional)
+    └── DONTS.md                      # Common mistakes (optional)
 ```
 
 ## Status
