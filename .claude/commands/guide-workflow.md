@@ -12,7 +12,7 @@ Reading the current workflow prompt and progress files:
 
 - Workflow instructions: @WORKFLOW-PROMPT.md
 - Current progress: @PROGRESS.md
-- Project instructions: @prompt.md
+- Project instructions: @CLAUDE.md
 
 ## Your Task
 
