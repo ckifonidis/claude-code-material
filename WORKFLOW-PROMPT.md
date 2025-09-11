@@ -5,18 +5,18 @@
 Please select which section you would like to work on:
 
 ### Available Sections:
-1. **Introduction to AI assisted development** - Status: Not Started
+1. **Introduction to AI assisted development** - Status: Started
 2. **Getting Started with Claude Code** - Status: Not Started  
-3. **Important Files** - Status: Not Started
+3. **Important Files** - Status: Started
 4. **Plan, Auto-accept, By-Pass** - Status: Not Started
-5. **Tool usage (allow, deny)** - Status: Not Started
+5. **Tool usage (allow, deny)** - Status: Running
 6. **Context Window management** - Status: Not Started
 7. **Your First Application** - Status: Not Started
 8. **Adding functionality to existing codebase** - Status: Not Started
 9. **Documenting your codebase** - Status: Not Started
 10. **Leveraging MCP to improve your workflows** - Status: Not Started
-11. **Slash Commands** - Status: Not Started
-12. **Subagents** - Status: Not Started
+11. **Slash Commands** - Status: Started
+12. **Subagents** - Status: Started
 13. **Claude Code tendencies** - Status: Not Started
 
 ---

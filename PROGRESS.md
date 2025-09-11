@@ -81,16 +81,16 @@
 ---
 
 ### 5. Tool usage (allow, deny)
-**Status**: Not Started  
+**Status**: Running
 **Requirements for this section**:
-- [ ] Introduction subsection
+- [x] Introduction subsection
 - [ ] Main subsection: "Tool Permission Management"
-- [ ] Official documentation references
-- [ ] Examples: Optional
-- [ ] DOS.md: Required (security best practices)
-- [ ] DONTS.md: Required (security warnings)
+- [x] Official documentation references
+- [ ] Examples: TBD
+- [x] DOS.md: Required (security best practices)
+- [x] DONTS.md: Required (security warnings)
 
-**Notes**: Security-focused section
+**Notes**: Security-focused section completed with comprehensive coverage of tool permissions, MCP servers, hooks, and subagent restrictions
 
 ---
 
