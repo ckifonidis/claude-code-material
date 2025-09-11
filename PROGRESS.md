@@ -81,12 +81,12 @@
 ---
 
 ### 5. Tool usage (allow, deny)
-**Status**: ✅ Completed  
+**Status**: Running
 **Requirements for this section**:
 - [x] Introduction subsection
-- [x] Main subsection: "Tool Permission Management"
+- [ ] Main subsection: "Tool Permission Management"
 - [x] Official documentation references
-- [x] Examples: Not needed for this section (examples integrated in main content)
+- [ ] Examples: TBD
 - [x] DOS.md: Required (security best practices)
 - [x] DONTS.md: Required (security warnings)
 
