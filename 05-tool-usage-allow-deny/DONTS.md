@@ -20,9 +20,6 @@
 # NEVER DO THIS
 claude mcp add server -- env  # Exposes ALL environment variables
 
-# ALSO AVOID
-claude mcp add server --env AWS_SECRET_KEY=$AWS_SECRET_KEY
-```
 **Why**: Environment variables often contain:
 - API keys and secrets
 - Database credentials
@@ -43,9 +40,8 @@ claude mcp add untrusted-server /path/to/server
 
 ### DON'T: Disable Security Hooks
 ```json
-// NEVER remove all security checks
 {
-  "hooks": {}  // No protection!
+  "hooks": {}
 }
 ```
 **Why**: Hooks provide essential safety barriers against:
