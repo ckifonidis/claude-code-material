@@ -19,8 +19,8 @@ from typing import List, Set, Dict
 # Documentation source URLs
 SOURCES = {
     'claude-docs': {
-        'url': 'https://docs.anthropic.com/llms.txt',
-        'pattern': r'https://docs\.claude\.com/[^\s\)]+\.md',
+        'url': 'https://platform.claude.com/llms.txt',
+        'pattern': r'https://platform\.claude\.com/[^\s\)]+\.md',
         'name': 'Claude Docs'
     },
     'claude-code': {
@@ -147,7 +147,7 @@ def main():
         epilog="""
 Examples:
   python download_docs.py                              # Download from both sources
-  python download_docs.py --claude-docs                # Only Claude docs (docs.claude.com)
+  python download_docs.py --claude-docs                # Only Claude docs (platform.claude.com)
   python download_docs.py --claude-code                # Only Claude Code docs (code.claude.com)
   python download_docs.py --filter agent-sdk           # Filter by pattern
   python download_docs.py --no-follow-redirects        # Disable redirect following
