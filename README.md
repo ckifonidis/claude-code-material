@@ -45,25 +45,37 @@ Each section is designed to be self-contained while building upon previous conce
 
 ## Documentation Downloader
 
-This project includes a tool to automatically download the latest Anthropic documentation for offline reference:
+This project includes a tool to automatically download the latest Claude documentation for offline reference:
 
 ```bash
-# Download all Claude Code documentation
-python documentation_downloader/download_docs.py --filter claude-code
-
-# Download all Anthropic documentation
+# Download from both sources (Claude docs + Claude Code docs)
 python documentation_downloader/download_docs.py
 
+# Download only from Claude docs (docs.claude.com)
+python documentation_downloader/download_docs.py --claude-docs
+
+# Download only from Claude Code docs (code.claude.com)
+python documentation_downloader/download_docs.py --claude-code
+
+# Filter by pattern
+python documentation_downloader/download_docs.py --filter agent-sdk
+
+# Disable redirect following
+python documentation_downloader/download_docs.py --no-follow-redirects
+
 # Custom output directory
-python documentation_downloader/download_docs.py --filter claude-code --output custom_docs
+python documentation_downloader/download_docs.py --output custom_docs
 ```
 
 **Features:**
-- ✅ Dynamically fetches URLs from https://docs.anthropic.com/llms.txt
-- ✅ Always gets the latest documentation
-- ✅ Downloads to `gitignore/downloaded_docs` (ignored by git)
-- ✅ Maintains proper directory structure
-- ✅ Filter by documentation sections
+- Supports multiple documentation sources:
+  - Claude Docs (`docs.claude.com/llms.txt`)
+  - Claude Code Docs (`code.claude.com/docs/en/claude_code_docs_map.md`)
+- Downloads from both sources by default
+- Redirect following with logging (enabled by default)
+- Downloads to `gitignore/downloaded_docs` (ignored by git)
+- Maintains proper directory structure
+- Filter by URL patterns
 
 ## Contributing
 

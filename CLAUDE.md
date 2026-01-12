@@ -44,14 +44,23 @@ This is a comprehensive Claude Code guide repository structured as 13 numbered s
 
 ### Documentation Management
 ```bash
-# Download latest Claude Code documentation
-python documentation_downloader/download_docs.py --filter claude-code
-
-# Download all Anthropic documentation
+# Download from both sources (Claude docs + Claude Code docs)
 python documentation_downloader/download_docs.py
 
+# Download only from Claude docs (docs.claude.com)
+python documentation_downloader/download_docs.py --claude-docs
+
+# Download only from Claude Code docs (code.claude.com)
+python documentation_downloader/download_docs.py --claude-code
+
+# Filter by pattern
+python documentation_downloader/download_docs.py --filter agent-sdk
+
+# Disable redirect following
+python documentation_downloader/download_docs.py --no-follow-redirects
+
 # Custom output directory
-python documentation_downloader/download_docs.py --filter claude-code --output custom_docs
+python documentation_downloader/download_docs.py --output custom_docs
 ```
 
 ## Architecture & Structure
@@ -76,10 +85,14 @@ The `/guide-workflow` command operates in three modes:
 3. **Content Processing**: Analyze, improve, and intelligently place user-provided content
 
 ### Documentation Downloader
-- Dynamically fetches URLs from https://docs.anthropic.com/llms.txt
+- Supports multiple documentation sources:
+  - Claude Docs (`docs.claude.com/llms.txt`)
+  - Claude Code Docs (`code.claude.com/docs/en/claude_code_docs_map.md`)
+- Downloads from both sources by default
+- Redirect following with logging (enabled by default)
 - Downloads to `gitignore/downloaded_docs/` (ignored by git)
-- Maintains directory structure matching Anthropic's documentation hierarchy
-- Supports filtering by documentation sections
+- Maintains directory structure matching documentation hierarchy
+- Supports filtering by URL patterns
 
 ## Section Quality Standards
 
